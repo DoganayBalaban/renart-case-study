@@ -16,7 +16,22 @@ const app = express();
 // CORS middleware
 app.use(
   cors({
-    origin: CORS_ORIGINS,
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl requests)
+      if (!origin) return callback(null, true);
+
+      // Check if origin is in allowed list
+      if (CORS_ORIGINS.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        // For production, also allow vercel.app domains
+        if (NODE_ENV === "production" && origin.includes("vercel.app")) {
+          callback(null, true);
+        } else {
+          callback(new Error("Not allowed by CORS"));
+        }
+      }
+    },
     credentials: true,
   })
 );
