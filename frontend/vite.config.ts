@@ -6,15 +6,25 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
+    target: "esnext",
+    minify: "esbuild",
+    sourcemap: false,
     rollupOptions: {
-      external: [
-        // Exclude font files from bundle
-        /\.ttf$/,
-        /\.otf$/,
-        /\.woff$/,
-        /\.woff2$/,
-        /\.eot$/,
-      ],
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          swiper: ["swiper"],
+          axios: ["axios"],
+        },
+      },
     },
+  },
+  server: {
+    port: 5173,
+    host: true,
+  },
+  preview: {
+    port: 4173,
+    host: true,
   },
 });

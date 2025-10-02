@@ -1,6 +1,6 @@
 import { useState } from "react";
-import type { Product } from "../models/product.model.js";
-import ProductCard from "./ProductCard.js";
+import type { Product } from "../models/product.model";
+import ProductCard from "./ProductCard";
 
 interface ProductCarouselProps {
   products: Product[];

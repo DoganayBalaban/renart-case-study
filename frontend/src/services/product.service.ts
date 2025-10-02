@@ -1,7 +1,6 @@
 import axios from "axios";
-import type { ApiResponse } from "../models/product.model.js";
-
-const API_BASE_URL = "http://localhost:3000/api/v1";
+import type { ApiResponse } from "../models/product.model";
+import { config } from "../config/environment";
 
 export const productApi = {
   getAllProducts: async (params?: {
@@ -13,9 +12,9 @@ export const productApi = {
     sortOrder?: string;
   }): Promise<ApiResponse> => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/products`, {
+      const response = await axios.get(`${config.api.baseUrl}/products`, {
         params,
-        timeout: 10000, // 10 second timeout
+        timeout: config.api.timeout,
       });
       return response.data;
     } catch (error) {

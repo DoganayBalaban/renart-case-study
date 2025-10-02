@@ -1,7 +1,7 @@
 import { useState } from "react";
-import type { Product, ColorType } from "../models/product.model.js";
-import ProductColorPicker from "./ProductColorPicker.js";
-import ProductImage from "./ProductImage.js";
+import type { Product, ColorType } from "../models/product.model";
+import ProductColorPicker from "./ProductColorPicker";
+import ProductImage from "./ProductImage";
 
 interface ProductCardProps {
   product: Product;

@@ -1,4 +1,4 @@
-import type { ColorType } from "../models/product.model.js";
+import type { ColorType } from "../models/product.model";
 
 interface ProductColorPickerProps {
   selectedColor: ColorType;

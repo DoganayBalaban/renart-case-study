@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: jewelry-store-backend
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    healthCheckPath: /api/v1/products
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        fromService:
+          type: web
+          name: jewelry-store-backend
+          property: port
+      - key: CORS_ORIGIN
+        value: https://jewelry-store-frontend.onrender.com
+      - key: GOLD_PRICE_API_KEY
+        sync: false # This will be set manually in Render dashboard

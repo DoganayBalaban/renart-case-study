@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import type { Product } from "./models/product.model.js";
-import { productApi } from "./services/product.service.js";
-import ProductCarousel from "./components/ProductCarousel.js";
-import ProductFilterPanel from "./components/ProductFilterPanel.js";
+import type { Product } from "./models/product.model";
+import { productApi } from "./services/product.service";
+import ProductCarousel from "./components/ProductCarousel";
+import ProductFilterPanel from "./components/ProductFilterPanel";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
