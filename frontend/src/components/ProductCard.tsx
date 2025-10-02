@@ -1,7 +1,7 @@
 import { useState } from "react";
-import type { Product, ColorType } from "../types/Product.js";
-import ColorPicker from "./ColorPicker.js";
-import SimpleImage from "./SimpleImage.js";
+import type { Product, ColorType } from "../models/product.model.js";
+import ProductColorPicker from "./ProductColorPicker.js";
+import ProductImage from "./ProductImage.js";
 
 interface ProductCardProps {
   product: Product;
@@ -48,7 +48,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <div className="bg-white rounded-lg border border-gray-100 hover:border-gray-200 transition-all duration-200 overflow-hidden group">
       {/* Product Image */}
       <div className="relative bg-gray-50 aspect-square overflow-hidden">
-        <SimpleImage
+        <ProductImage
           src={product.images[selectedColor]}
           alt={`${product.name} - ${selectedColor}`}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -76,7 +76,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
         {/* Color Picker */}
         <div className="mb-3">
-          <ColorPicker
+          <ProductColorPicker
             selectedColor={selectedColor}
             onColorChange={setSelectedColor}
           />

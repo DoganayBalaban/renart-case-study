@@ -1,11 +1,11 @@
-import type { ColorType } from "../types/Product.js";
+import type { ColorType } from "../models/product.model.js";
 
-interface ColorPickerProps {
+interface ProductColorPickerProps {
   selectedColor: ColorType;
   onColorChange: (color: ColorType) => void;
 }
 
-const ColorPicker: React.FC<ColorPickerProps> = ({
+const ProductColorPicker: React.FC<ProductColorPickerProps> = ({
   selectedColor,
   onColorChange,
 }) => {
@@ -68,4 +68,4 @@ const ColorPicker: React.FC<ColorPickerProps> = ({
   );
 };
 
-export default ColorPicker;
+export default ProductColorPicker;

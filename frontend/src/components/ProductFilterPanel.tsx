@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-interface FilterPanelProps {
+interface ProductFilterPanelProps {
   onFilterChange: (filters: {
     minPrice?: number;
     maxPrice?: number;
@@ -12,7 +12,7 @@ interface FilterPanelProps {
   goldPrice: number;
 }
 
-const FilterPanel: React.FC<FilterPanelProps> = ({
+const ProductFilterPanel: React.FC<ProductFilterPanelProps> = ({
   onFilterChange,
   goldPrice,
 }) => {
@@ -168,4 +168,4 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   );
 };
 
-export default FilterPanel;
+export default ProductFilterPanel;

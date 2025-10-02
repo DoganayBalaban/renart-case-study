@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { ApiResponse } from "../types/Product.js";
+import type { ApiResponse } from "../models/product.model.js";
 
 const API_BASE_URL = "http://localhost:3000/api/v1";
 

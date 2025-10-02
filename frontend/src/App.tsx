@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import type { Product } from "./types/Product.js";
-import { productApi } from "./services/api.js";
-import SimpleSwipeCarousel from "./components/SimpleSwipeCarousel.js";
-import FilterPanel from "./components/FilterPanel.js";
+import type { Product } from "./models/product.model.js";
+import { productApi } from "./services/product.service.js";
+import ProductCarousel from "./components/ProductCarousel.js";
+import ProductFilterPanel from "./components/ProductFilterPanel.js";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -103,7 +103,7 @@ function App() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
           <aside className="lg:w-80 flex-shrink-0">
-            <FilterPanel
+            <ProductFilterPanel
               onFilterChange={handleFilterChange}
               goldPrice={goldPrice}
             />
@@ -111,7 +111,7 @@ function App() {
 
           {/* Content */}
           <main className="flex-1">
-            <SimpleSwipeCarousel products={products} />
+            <ProductCarousel products={products} />
           </main>
         </div>
       </div>

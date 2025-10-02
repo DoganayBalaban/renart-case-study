@@ -1,85 +1,13 @@
+/* Google Fonts Import - Must be first */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
 @import "tailwindcss";
 @import "swiper/css";
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
 
-/* Font Face Definitions */
-@font-face {
-  font-family: "Avenir";
-  src: url("../Fonts/avenir/Avenir-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("../Fonts/avenir/Avenir-Roman.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("../Fonts/avenir/Avenir-Book.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("../Fonts/avenir/Avenir-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("../Fonts/avenir/Avenir-Heavy.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("../Fonts/avenir/Avenir-Black.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../Fonts/montserat/Montserrat-Light.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../Fonts/montserat/Montserrat-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../Fonts/montserat/Montserrat-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../Fonts/montserat/Montserrat-SemiBold.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../Fonts/montserat/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
+/* Font Face Definitions - Fallback to system fonts */
+/* Avenir fallbacks to system fonts */
 
 /* Custom Animations */
 @keyframes spin {

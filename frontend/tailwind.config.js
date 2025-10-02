@@ -4,8 +4,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        avenir: ["Avenir", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+        avenir: [
+          "Avenir",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        montserrat: ["Montserrat", "Helvetica Neue", "Arial", "sans-serif"],
       },
       fontWeight: {
         "avenir-book": "400",

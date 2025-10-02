@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-interface SimpleImageProps {
+interface ProductImageProps {
   src: string;
   alt: string;
   className?: string;
   fallbackText: string;
 }
 
-const SimpleImage: React.FC<SimpleImageProps> = ({
+const ProductImage: React.FC<ProductImageProps> = ({
   src,
   alt,
   className = "",
@@ -67,4 +67,4 @@ const SimpleImage: React.FC<SimpleImageProps> = ({
   );
 };
 
-export default SimpleImage;
+export default ProductImage;
