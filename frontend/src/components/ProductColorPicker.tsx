@@ -42,12 +42,12 @@ const ProductColorPicker: React.FC<ProductColorPickerProps> = ({
           <button
             key={color.type}
             className={`
-              w-6 h-6 rounded-full border-2 transition-all duration-200
+              w-5 h-5 rounded-full transition-all duration-200 relative
               ${color.bgColor}
               ${
                 selectedColor === color.type
-                  ? `${color.borderColor} scale-110`
-                  : "border-gray-300 hover:border-gray-400"
+                  ? "ring-1 ring-black ring-offset-1 ring-offset-white scale-105"
+                  : "hover:ring-1 hover:ring-gray-400 hover:ring-offset-1 hover:ring-offset-white"
               }
             `}
             onClick={() => onColorChange(color.type)}
