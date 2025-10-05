@@ -56,7 +56,9 @@ function App() {
       <div className="min-h-screen bg-gray-50 font-avenir">
         <div className="flex flex-col items-center justify-center h-screen">
           <div className="w-8 h-8 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin mb-4"></div>
-          <p className="text-gray-600 text-sm">Loading products...</p>
+          <p className="text-gray-600 text-sm">
+            Loading products... Waiting Render.com to starting backend...
+          </p>
         </div>
       </div>
     );
